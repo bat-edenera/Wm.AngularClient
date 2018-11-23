@@ -3,7 +3,8 @@ import * as ApiServiceProxies from './service-proxies'
 
 @NgModule({
   providers: [
-    ApiServiceProxies.SessionServiceProxy
+    ApiServiceProxies.SessionServiceProxy,
+    ApiServiceProxies.HotelServiceProxy
   ]
 })
 export class ServiceProxiesModule { }

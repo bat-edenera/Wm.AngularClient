@@ -3,12 +3,17 @@
 </p>
 <!-- <button mat-flat-button color="primary" (click)="detail()">点我去hotel详情页</button> -->
 <!-- <button mat-flat-button color="primary" (click)="merchant()" style="margin-left: 10px;">点我去hotel 商家</button> -->
+
 <div class="container">
-  <div class="row">
-    <div class="col-md-3" *ngFor="let item of goods" style="cursor:pointer;" (click)="toGoodsDetail(item)">
-      <p>商品名称：{{item.title}}</p>
-      <p>商品id: {{item.id}}</p>
-      <p>商家id：{{item.merchantId}}</p>
-    </div>
-  </div>
+  <mat-grid-list cols="5" gutterSize="12" rowHeight="2:3">
+    <mat-grid-tile *ngFor="let item of goods">
+      <div class="card">
+          <img [src]="item.img" alt="">
+        <p>商品名称：{{item.title}}</p>
+        <p>商品id: {{item.id}}</p>
+        <p>商家id：{{item.merchantId}}</p>
+      </div>
+
+    </mat-grid-tile>
+  </mat-grid-list>
 </div>

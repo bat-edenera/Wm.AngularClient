@@ -1,7 +1,7 @@
 <div class="container">
   <h1 class="mat-h1">鱼类</h1>
-  <mat-grid-list cols="5" rowHeight="300" gutterSize ="20">
-    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+  <mat-grid-list cols="5" rowHeight="1:1" gutterSize ="20">
+    <mat-grid-tile *ngFor="let card of cards | async" >
       <mat-card class="dashboard-card">
         <mat-card-header>
           <mat-card-title>

@@ -6,12 +6,14 @@ import { HomeComponent } from './home/home.component';
 import { DetailComponent } from './detail/detail.component';
 import { HotelComponent } from './hotel.component';
 import { AppCommonModule } from '@app/shared/common/common.module';
+import { MaterialModule } from '@shared/common/meterial.module';
 
 @NgModule({
   imports: [
     CommonModule,
     AppCommonModule,
-    HotelRoutingModule
+    HotelRoutingModule,
+    MaterialModule,
   ],
   declarations: [HomeComponent, DetailComponent, HotelComponent],
   exports: [

@@ -11,7 +11,7 @@ export class AppRouteGuard implements CanActivate, CanActivateChild{
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot):boolean {
     if (location.origin === AppConsts.originLocation.dev || location.origin === AppConsts.originLocation.main) {
-      this._router.navigate(['/app/main/index']);
+      this._router.navigate(['/app/hotel/home']);
       return false
     }
     return true;

@@ -8,7 +8,7 @@ import { AppDashboardComponent } from './app-dashboard/app-dashboard.component';
 const routes: Routes = [
   {
     path: '',
-    component: AppDashboardComponent,
+    component: DashboardComponent,
     canActivate: [AppRouteGuard],
   },
   {
