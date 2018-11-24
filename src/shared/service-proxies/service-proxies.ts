@@ -1,6 +1,7 @@
 import { Injectable, InjectionToken, Inject } from "@angular/core";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, observable } from "rxjs";
+ import Mock from 'mockjs'
 
 export const API_BASE_URL = new InjectionToken<string>('API_BASE_URL');
 
@@ -49,15 +50,13 @@ export class HotelServiceProxy {
 
         return Observable.create((observer) => {
             setTimeout(() => {
-                observer.next([
-                    { title: 'Apple Watch Series 3智能手表', price: '2068元', img: '/assets/images/watch.jpg',id: 10001, merchantId: 'a0001' },
-                    { title: 'Apple Watch Series 3智能手表', price: '2068元', img: '/assets/images/watch.jpg',id: 10002, merchantId: 'a0002' },
-                    { title: 'Apple Watch Series 3智能手表', price: '2068元', img: '/assets/images/watch.jpg',id: 10003, merchantId: 'a0003' },
-                    { title: 'Apple Watch Series 3智能手表', price: '2068元', img: '/assets/images/watch.jpg',id: 10004, merchantId: '' },
-                    { title: 'Apple Watch Series 3智能手表', price: '2068元', img: '/assets/images/watch.jpg',id: 10005, merchantId: '' },
-                    { title: 'Apple Watch Series 3智能手表', price: '2068元', img: '/assets/images/watch.jpg',id: 10006, merchantId: '' },
-                    { title: 'Apple Watch Series 3智能手表', price: '2068元', img: '/assets/images/watch.jpg',id: 10007, merchantId: '' }
-                ])
+                observer.next(
+                    Mock.mock({
+                        "data|6-8": [
+                            { title: 'Apple Watch Series 3智能手表', price: '2068元', img: Mock.Random.image('500x500', '#00405d', '#FFF', '王静'), id: 10001, merchantId: 'a0001' }
+                        ]
+                    })['data']
+                )
             },500)
         })
 
