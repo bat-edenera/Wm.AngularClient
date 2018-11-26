@@ -7,10 +7,12 @@ import { DetailComponent } from './detail/detail.component';
 import { HotelComponent } from './hotel.component';
 import { AppCommonModule } from '@app/shared/common/common.module';
 import { MaterialModule } from '@shared/common/meterial.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     AppCommonModule,
     HotelRoutingModule,
     MaterialModule,

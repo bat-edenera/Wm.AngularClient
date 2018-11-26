@@ -18,6 +18,8 @@ import { LayoutModule } from '@angular/cdk/layout';
     Mat.MatSnackBarModule,
     Mat.MatPaginatorModule,
     Mat.MatMenuModule,
+    Mat.MatInputModule,
+    Mat.MatFormFieldModule,
     PortalModule,
     OverlayModule,
     LayoutModule

@@ -10,6 +10,8 @@ import { HotelServiceProxy } from '@shared/service-proxies/service-proxies';
 })
 export class HomeComponent extends AppComponentBase implements OnInit {
   goods = [];
+  modelName;
+  hide = true;
   constructor(
     injector: Injector,
     private router: Router,
