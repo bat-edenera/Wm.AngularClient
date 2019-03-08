@@ -52,7 +52,7 @@ export class HotelServiceProxy {
             setTimeout(() => {
                 observer.next(
                     Mock.mock({
-                        "data|6-8": [
+                        "data|10": [
                             { title: 'Apple Watch Series 3智能手表', price: '2068元', img: Mock.Random.image('500x500', '#00405d', '#FFF', 'mock'), id: 10001, merchantId: 'a0001' }
                         ]
                     })['data']

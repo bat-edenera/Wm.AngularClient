@@ -78,7 +78,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "wonmore:build"
+            "browserTarget": "wonmore:build",
+            "hmrWarning": false
           },
           "configurations": {
             "production": {

@@ -5,7 +5,7 @@
 <!-- <button mat-flat-button color="primary" (click)="merchant()" style="margin-left: 10px;">点我去hotel 商家</button> -->
 
 <div class="container">
-  <mat-grid-list cols="5" gutterSize="12" rowHeight="372">
+  <mat-grid-list cols="5" gutterSize="12" rowHeight="423">
     <mat-grid-tile *ngFor="let item of goods">
       <mat-card>
         <img matCardImage [src]="item.img">
@@ -18,7 +18,7 @@
               <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </mat-form-field>
             <mat-card-actions align="end">
-              <button mat-button (click)="addToCart()" color="accent">加入购物车</button>
+              <button mat-flat-button (click)="addToCart()" color="primary">加入购物车</button>
             </mat-card-actions>
         </mat-card-content>
       </mat-card>
