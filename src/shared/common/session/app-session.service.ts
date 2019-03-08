@@ -9,9 +9,6 @@ import { UtileService } from '../utils/util.service';
 export class AppSessionService {
   private _authToken: string;
   private _user;
-  private _merchant;
-  private _goods;
-
   constructor(
     private _sessionService: SessionServiceProxy,
     private util: UtileService
@@ -42,44 +39,5 @@ export class AppSessionService {
   }
   get userId() {
     return this.user.id
-  }
-
-  /**
-   * 商家信息
-   */
-  set merchantId(id) {
-    this._merchant = this._merchant || {};
-    this._merchant.id = id;
-  }
-  set merchant(merchant) {
-    this._merchant = merchant;
-  }
-
-  get merchant() {
-    return this._merchant;
-  }
-  get merchantId() {
-    this._merchant = this._merchant || {};
-    return this._merchant.id;
-  }
-
-  /**
-   * 商品信息
-   */
-
-  set goodsId(id) {
-    this._goods = this._goods || {};
-    this._goods.id = id;
-  }
-  set goods(goods) {
-    this._goods = goods;
-  }
-
-  get goods() {
-    return this._goods;
-  }
-  get goodsId() {
-    this._goods = this._goods || {};
-    return this._goods.id;
   }
 }

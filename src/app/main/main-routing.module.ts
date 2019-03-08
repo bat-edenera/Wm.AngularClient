@@ -1,17 +1,13 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Router, NavigationStart } from '@angular/router';
 import { IndexComponent } from "./index/index.component";
-import { TestComponent } from "./test/test.component";
-import { AboutComponent } from "./about/about.component";
-
 @NgModule({
   imports: [RouterModule.forChild([
     {
       path: '',
-      component: TestComponent,
+      // component: ,
       children: [
         { path: 'index', component: IndexComponent },
-        { path: 'about', component: AboutComponent }
       ]
     }
   ])],
